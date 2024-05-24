@@ -21,7 +21,7 @@ const Create = () => {
       description: "",
     },
     validationSchema: taskSchema,
-    onSubmit(values, { setSubmitting, resetForm }) {
+    onSubmit(values, { setSubmitting }) {
       setSubmitting(true);
       dispatch(taskAsyncThunk.createTask(values)).then(() => {
         setSubmitting(false);

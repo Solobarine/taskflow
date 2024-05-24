@@ -107,10 +107,10 @@ Contributions are welcome! Please follow these steps to contribute:
 
 ## ✍️ Author
 
-Name: Solomon Barine Akpuru
-GitHub: [GitHub Handle](https://github.com/solobarine)
-LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/solomon-akpuru)
-Wellfound: [Wellfound Handle](https://wellfound.com/u/solomon-akpuru)
+- Name: Solomon Barine Akpuru
+- GitHub: [GitHub Handle](https://github.com/solobarine)
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/solomon-akpuru)
+- Wellfound: [Wellfound Handle](https://wellfound.com/u/solomon-akpuru)
 
 ## License
 

@@ -16,9 +16,7 @@ const loginSchema = Yup.object().shape({
 
 const Login = () => {
   const dispatch: AppDispatch = useDispatch();
-  const { loadingState, errorCode } = useSelector(
-    (state: RootState) => state.user
-  );
+  const { errorCode } = useSelector((state: RootState) => state.user);
   const form = useFormik({
     initialValues: { email: "", password: "" },
     validationSchema: loginSchema,

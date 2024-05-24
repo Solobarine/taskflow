@@ -1,3 +1,5 @@
+import { IonIcon } from "@ionic/react";
+
 const Features = () => {
   return (
     <div className="w-full sm:w-11/12 mx-auto py-20">
@@ -12,7 +14,7 @@ const Features = () => {
       </div>
       <div className="overflow-hidden responsive-grid mx-auto">
         <div className="p-6 grid gap-3 border border-zinc-300">
-          <ion-icon name="sparkles-sharp" size="large"></ion-icon>
+          <IonIcon name="sparkles-sharp" size="large" />
           <p className="font-semibold text-lg">
             Increase Output and Productivity
           </p>
@@ -26,7 +28,7 @@ const Features = () => {
           </button>
         </div>
         <div className="p-6 grid gap-3 border border-zinc-300">
-          <ion-icon name="sparkles-sharp" size="large"></ion-icon>
+          <IonIcon name="sparkles-sharp" size="large" />
           <p className="font-semibold text-lg self-start">
             Accessible Anywhere and Anytime
           </p>
@@ -40,7 +42,7 @@ const Features = () => {
           </button>
         </div>
         <div className="p-6 grid gap-3 border border-zinc-300">
-          <ion-icon name="sparkles-sharp" size="large"></ion-icon>
+          <IonIcon name="sparkles-sharp" size="large" />
           <p className="font-semibold text-lg">
             Empower team members and make them execute work
           </p>
@@ -54,7 +56,7 @@ const Features = () => {
           </button>
         </div>
         <div className="p-6 grid gap-3 border border-zinc-300">
-          <ion-icon name="sparkles-sharp" size="large"></ion-icon>
+          <IonIcon name="sparkles-sharp" size="large" />
           <p className="font-semibold text-lg">
             Increase Output and Productivity
           </p>

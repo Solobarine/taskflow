@@ -30,7 +30,7 @@ const Update = ({ setToggleState }: { setToggleState: Function }) => {
       dispatch(taskUpdate({ payload: form.values }));
     },
   });
-  console.log(form.errors);
+
   useEffect(() => {
     form.setValues((values: any) => ({ ...values, ...task }));
   }, [task]);

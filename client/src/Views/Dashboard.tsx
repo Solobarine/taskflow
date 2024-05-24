@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     dispatch(taskAsyncThunk.getTasks());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="relative flex flex-wrap gap-4 p-4">
