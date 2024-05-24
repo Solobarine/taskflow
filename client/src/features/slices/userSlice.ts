@@ -31,7 +31,7 @@ const userSlice = createSlice({
         state.errorCode = undefined;
         state.isLoggedIn = true;
         localStorage.setItem("auth_token", action.payload.data.token);
-        window.location.assign(`http://${window.location.host}/dashboard`);
+        window.location.assign(`${window.location.origin}/dashboard`);
       }
     );
     builder.addCase(userAsyncThunk.register.rejected, (state, action) => {
@@ -50,7 +50,7 @@ const userSlice = createSlice({
         state.errorCode = undefined;
         state.isLoggedIn = true;
         localStorage.setItem("auth_token", action.payload.data.token);
-        window.location.assign(`http://${window.location.host}/dashboard`);
+        window.location.assign(`${window.location.origin}/dashboard`);
       }
     );
     builder.addCase(userAsyncThunk.login.rejected, (state, action) => {
