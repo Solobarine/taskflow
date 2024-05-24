@@ -9,12 +9,9 @@ const Task = ({ task, setToggle }: { task: any; setToggle: Function }) => {
   const dispatch: AppDispatch = useDispatch();
   const [hover, setHover] = useState(false);
   return (
-    <div className="p-2 rounded-lg shadow-sm bg-white">
+    <div className="p-2 rounded-lg shadow-sm bg-white relative">
       <span className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <input type="checkbox" name="complete" id="complete" />
-          <p className="text-lg mt-1">{task.title}</p>
-        </div>
+        <p className="text-lg mt-1">{task.title}</p>
         <button
           className="text-xl font-semibold"
           onClick={() => {
@@ -26,7 +23,7 @@ const Task = ({ task, setToggle }: { task: any; setToggle: Function }) => {
         </button>
       </span>
       <p className="text-sm my-2">{task.description}</p>
-      <p className="text-xs font-semibold pl-6">
+      <p className="text-xs font-semibold bottom-1 left-1 absolute">
         {`${formatDate(task.createdAt, "eeee")}, ${getYear(task.createdAt)}`}
       </p>
       <button

@@ -31,7 +31,7 @@ class TaskController {
       const task = await Task.findById(id);
 
       if (req.user.id == task.userId) {
-        task.updatetitle = title;
+        task.title = title;
         task.description = description;
         await task.save();
         return res

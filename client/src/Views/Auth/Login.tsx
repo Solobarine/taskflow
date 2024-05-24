@@ -33,7 +33,10 @@ const Login = () => {
 
   return (
     <div className="flex flex-wrap py-20 min-h-screen p-6">
-      <div className="grow-[99999]"></div>
+      <div className="grow-[99999] relative hidden sm:block">
+        <img src="/bg3.png" alt="" className="w-full" />
+        <img src="/people.png" alt="" className="absolute top-1/2" />
+      </div>
       <div className="bg-white shadow-md rounded-xl p-4 grow basis-[450px]">
         <h2 className="font-semibold text-2xl text-center mb-8">
           Login to TaskFlow
@@ -73,7 +76,7 @@ const Login = () => {
             )}
           </div>
           <button
-            className={`w-fit px-8 mt-4 py-2 rounded-lg text-sm font-semibold bg-rose-200 shadow md ${
+            className={`w-fit px-8 mt-4 py-2 rounded-lg text-sm font-semibold bg-cyan-200 shadow md ${
               form.isSubmitting ? "opacity-80" : ""
             }`}
             disabled={form.isSubmitting}

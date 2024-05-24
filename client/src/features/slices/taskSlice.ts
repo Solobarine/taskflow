@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import taskAsyncThunk from "../thunks/taskThunk";
+import { toast } from "react-toastify";
 
 const { getTasks, createTask, updateTask, deleteTask } = taskAsyncThunk;
 
@@ -88,17 +89,22 @@ const taskSlice = createSlice({
     });
     builder.addCase(
       createTask.fulfilled,
-      (state, action: PayloadAction<{ data: { task: any } }>) => {
+      (
+        state,
+        action: PayloadAction<{ data: { message: string; task: any } }>
+      ) => {
         state.create.loadingState = "idle";
         state.create.data = action.payload.data.task;
         state.tasks.data = [...state.tasks.data, action.payload.data.task] as [
           any
         ];
+        toast(action.payload.data.message);
       }
     );
     builder.addCase(createTask.rejected, (state, action) => {
       state.create.loadingState = "failed";
       state.create.errorCode = action.error.code;
+      toast(action.error.message);
     });
     builder.addCase(updateTask.pending, (state) => {
       state.update.loadingState = "pending";
@@ -126,11 +132,13 @@ const taskSlice = createSlice({
               }
             : task
         ) as [any];
+        toast(action.payload.data.message);
       }
     );
     builder.addCase(updateTask.rejected, (state, action) => {
       state.update.loadingState = "failed";
       state.update.errorCode = action.error.code;
+      toast(action.error.message);
     });
     builder.addCase(deleteTask.pending, (state) => {
       state.delete.loadingState = "pending";
@@ -147,11 +155,13 @@ const taskSlice = createSlice({
         state.tasks.data = state.tasks.data.filter(
           (task) => task._id !== action.payload.data._id
         ) as [any];
+        toast(action.payload.data.message);
       }
     );
     builder.addCase(deleteTask.rejected, (state, action) => {
       state.delete.loadingState = "failed";
       state.delete.errorCode = action.error.code;
+      toast(action.error.message);
     });
   },
 });
